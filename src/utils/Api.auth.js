@@ -153,7 +153,7 @@ export class ApiAuth {
 }
 
 const apiAuth = new ApiAuth({
-  baseUrl: "https://diplomagud.nomoredomains.rocks",
+  baseUrl: "https://reqres.in/",
 });
 
 export { apiAuth };
