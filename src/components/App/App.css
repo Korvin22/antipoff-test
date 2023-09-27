@@ -9,8 +9,7 @@
 }
 
 .app__container {
-  background-color: #000000;
-  color: #ffffff;
+  color: #000000;
   font-family: "Inter", "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -4,7 +4,6 @@ function Main(props) {
   return (
     <main>
       <Header />
-      <Footer />
     </main>
   );
 }
