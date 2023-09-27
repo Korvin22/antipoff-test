@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import Partner from "../Partner/Partner";
 import { Routes, useLocation } from "react-router-dom";
 import Register from "../Register/Register";
 import Main from "../Main/Main";
@@ -66,6 +67,7 @@ function App(props) {
       <div className="app__container">
         <Routes>
           <Route exact path="/" element={<Main loggedIn={loggedIn} />} />
+          <Route path="/partner" element={<Partner />} />
           <Route
             path="/signup"
             element={
