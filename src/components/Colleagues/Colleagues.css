@@ -1,0 +1,25 @@
+.colleagues {
+  max-width: 1280px;
+  margin: 48px auto 56px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  row-gap: 20px;
+  column-gap: 20px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 984px) {
+  .colleagues {
+    margin: 48px 0px 56px 0px;
+    justify-items: center;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 628px) {
+  .colleagues {
+    margin: 0 5px 0 5px;
+  }
+}

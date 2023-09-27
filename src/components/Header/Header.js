@@ -1,5 +1,3 @@
-import logo from "../../images/logo.svg";
-
 import { useState } from "react";
 
 import { Link } from "react-router-dom";

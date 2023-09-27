@@ -1,4 +1,4 @@
-import logo from "../../images/logo.svg";
+
 import { Link } from "react-router-dom";
 import { useFormWithValidation } from "../../hooks/UseForm";
 import { useEffect, useState } from "react";
@@ -30,9 +30,6 @@ function Register(props) {
 
   return (
     <div className="register">
-      <Link to="/">
-        <img src={logo} className="logo" alt="logo" />
-      </Link>
       <div className="register__container">
         <h2 className="register__title">Добро пожаловать!</h2>
         <form
