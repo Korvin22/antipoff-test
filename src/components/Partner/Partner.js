@@ -1,12 +1,25 @@
 import initialColleagues from "../../vendor/constants";
+import { Link } from "react-router-dom";
 
-
-function Partner(porps) {
+function Partner(props) {
   return (
     <>
-      <div className="partner__header">
-
-      </div>
+      <header className="partner__header">
+        <Link className="partner__button_back" to="/">
+          Назад
+        </Link>
+        <div className="partner__info">
+          <img
+            src={initialColleagues[0].image}
+            className="partner__image"
+          ></img>
+          <div className="partner__text">
+            <h2 className="partner__name">{initialColleagues[0].name}</h2>
+            <p className="header__subtitle">Партнер</p>
+          </div>
+        </div>
+        <button className="partner__button">Выход</button>
+      </header>
       <div className="partner__wrapper">
         <p className="partner__descr">
           Клиенты видят в нем эксперта по вопросам разработки комплексных
