@@ -1,21 +1,19 @@
 @font-face {
-    font-family: 'Inter';
-    src: url(./Inter-Regular.woff2) format('woff2'),
-         url(./Inter-Regular.woff) format('woff');
+    font-family: 'Roboto';
+    src: url(./Roboto-Regular.ttf) format('ttf');
          font-weight:400;
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url(./Inter-Medium.woff2) format('woff2'),
-       url(./Inter-Medium.woff) format('woff');
+  font-family: 'Roboto';
+  src: url(./Roboto-Medium.ttf) format('ttf');
   font-weight:500;
 }
 
 
 @font-face {
-    font-family: 'Inter';
-    src: url(./Inter-Black.woff2) format('woff2'),
-         url(./Inter-Black.woff) format('woff');
+    font-family: 'Roboto';
+    src: url(./Roboto-Black.ttf) format('ttf');
     font-weight:900;
 }
+

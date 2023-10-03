@@ -9,7 +9,7 @@ import im8 from "../images/Ellipse (7).svg";
 
 const initialColleagues = [
     {
-      name: "Артур Королев",
+      name: "Артур Королёв",
       image: im1,
     },
     {
