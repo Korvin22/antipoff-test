@@ -1,13 +1,28 @@
+import React from "react";
 import initialColleagues from "../../vendor/constants";
 import { Link } from "react-router-dom";
 import phone from "../../images/tel.svg";
 import mail from "../../images/mail.svg";
+import back from "../../images/arrow_back.svg";
+import exit from "../../images/exit.svg";
+
 function Partner(props) {
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const breakpoint = 550;
+  React.useEffect(() => {
+    const handleResizeWindow = () => setWidth(window.innerWidth);
+    // subscribe to window resize event "onComponentDidMount"
+    window.addEventListener("resize", handleResizeWindow);
+    return () => {
+      // unsubscribe "onComponentDestroy"
+      window.removeEventListener("resize", handleResizeWindow);
+    };
+  }, []);
   return (
     <>
       <header className="partner__header">
         <Link className="partner__button_back" to="/">
-          Назад
+          {width > breakpoint ? "Назад" : <img src={back} alt="back"/>}
         </Link>
         <div className="partner__info">
           <img
@@ -20,7 +35,7 @@ function Partner(props) {
             <p className="partner__subtitle">Партнер</p>
           </div>
         </div>
-        <button className="partner__button">Выход</button>
+        <button className="partner__button">{width > breakpoint ? "Выход" : <img src={exit} alt="exit"/>}</button>
       </header>
       <div className="partner__wrapper">
         <p className="partner__descr">
