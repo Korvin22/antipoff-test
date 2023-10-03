@@ -39,11 +39,11 @@ export function useFormWithValidation() {
         [name]: passwordValid ? "" : " Заполните поле пароль",
       });
     }
-    if (name === "movie") {
-      const movieValid = value.length >= 1;
+    if (name === "password2") {
+      const password2Valid = value.length >= 1;
       setErrors({
         ...errors,
-        [name]: movieValid ? "" : " Заполните поле поиска",
+        [name]: password2Valid ? "" : " Введите пароль повторно",
       });
     }
     setIsValid(target.closest("form").checkValidity());

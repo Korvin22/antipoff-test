@@ -177,9 +177,10 @@
     margin-right: auto;
   }
   .partner__header {
-    height: 412px;
+    height: 400px;
     padding-left: 16px;
     padding-right: 16px;
+    padding-top:12px;
   }
   .partner__title {
     color: var(--White, #fff);
@@ -201,6 +202,9 @@
     margin: 0;
     align-items: center;
   }
+  .partner__image {
+    margin-top:16px;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -215,6 +219,7 @@
   .partner__button {
     border:none;
     padding: 0;
+    width:40px;
   }
   .partner__button_back {
     padding:0;

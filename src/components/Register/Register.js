@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { useFormWithValidation } from "../../hooks/UseForm";
 import { useEffect, useState } from "react";
@@ -31,7 +30,7 @@ function Register(props) {
   return (
     <div className="register">
       <div className="register__container">
-        <h2 className="register__title">Добро пожаловать!</h2>
+        <h2 className="register__title">Регистрация</h2>
         <form
           className="register__form"
           name="email-and-password"
@@ -54,7 +53,7 @@ function Register(props) {
           />
           <span className="register__error">{errors.name}</span>
           <label htmlFor="email" className="register__label">
-            E-mail
+            Электронная почта
           </label>
           <input
             required
@@ -80,6 +79,19 @@ function Register(props) {
             value={values.password}
             onChange={handleChange}
           />
+          <label htmlFor="password" className="register__label">
+            Подтвердите пароль
+          </label>
+          <input
+            required
+            type="password"
+            name="password"
+            className="register__input"
+            placeholder="Пароль"
+            id="password"
+            value={values.password}
+            onChange={handleChange}
+          />
           <span className="register__error">{errors.password}</span>
           <button
             className={`${
@@ -92,13 +104,6 @@ function Register(props) {
           </button>
         </form>
         <p className="profile__error">{props.message}</p>
-
-        <div className="register__wrapper">
-          <p className="register__text">Уже зарегистрированы?</p>
-          <Link to="/signin" className="register__link">
-            Войти
-          </Link>
-        </div>
       </div>
     </div>
   );

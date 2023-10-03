@@ -20,6 +20,7 @@
   text-align: left;
   margin-top: 40px;
   margin-bottom: 40px;
+  align-self: flex-start;
 }
 
 .register__form {
@@ -62,7 +63,7 @@
   height: 45px;
   color: white;
   border: none;
-  margin-top:179px;
+  margin-top:24px;
 }
 
 .register__button_disabled {
@@ -73,7 +74,7 @@
   height: 45px;
   color: white;
   border: none;
-  margin-top:91px;
+  margin-top:24px;
 }
 
 .register__wrapper {

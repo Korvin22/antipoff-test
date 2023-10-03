@@ -1,19 +1,25 @@
 import { useState } from "react";
-
+import React from "react";
+import exit from "../../images/exit.svg";
 import { Link } from "react-router-dom";
 function Header(props) {
-  const [isOpen, setIsOpen] = useState(false);
-  function openBurger() {
-    setIsOpen(true);
-  }
-
-  function closeBurger() {
-    setIsOpen(false);
-  }
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const breakpoint = 550;
+  React.useEffect(() => {
+    const handleResizeWindow = () => setWidth(window.innerWidth);
+    // subscribe to window resize event "onComponentDidMount"
+    window.addEventListener("resize", handleResizeWindow);
+    return () => {
+      // unsubscribe "onComponentDestroy"
+      window.removeEventListener("resize", handleResizeWindow);
+    };
+  }, []);
   return (
     <>
       <header className="header">
-      <button className="header__button">Выход</button>
+        <button className="header__button">
+          {width > breakpoint ? "Выход" : <img src={exit} alt="exit" />}
+        </button>
         <div className="header__text">
           <h1 className="header__title">Наша команда</h1>
           <p className="header__subtitle">

@@ -9,6 +9,7 @@ import { Route } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { apiAuth } from "../../utils/Api.auth";
+import ProtectedRoute from "./ProtectedRoute";
 
 function App(props) {
   const [message, setMessage] = useState("");
@@ -16,40 +17,11 @@ function App(props) {
   const [loggedIn, setLoggedIn] = useState(false);
   const navigate = useNavigate();
 
-  function handleLogin() {
-    setLoggedIn(true);
-    localStorage.setItem("loggedIn", loggedIn);
-    console.log(localStorage.loggedIn);
-  }
-
-  function handleUpdateAutharization(data) {
-    apiAuth
-      .authorize(data.email, data.password)
-      .then((res) => {
-        localStorage.setItem("token", res.token);
-        localStorage.setItem("email", res.email);
-        const jwt = localStorage.getItem("token");
-        if (jwt) {
-          apiAuth
-            .checkToken(jwt)
-            .then((res) => {
-              setLoggedIn(true);
-              navigate("/");
-            })
-            .catch((err) => console.log(err));
-        }
-        handleLogin();
-        navigate("/");
-      })
-      .catch((err) => setMessage(err));
-  }
-
   function handleUpdateRegistration(data) {
     apiAuth
       .register(data.name, data.email, data.password)
       .then((res) => {
         setSuccessReg(true);
-        handleUpdateAutharization(data);
         localStorage.setItem("regName", res.name);
         localStorage.setItem("regEmail", res.email);
         navigate("/");

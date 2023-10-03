@@ -22,8 +22,8 @@
   letter-spacing: 0em;
   text-align: left;
   color: white;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 .header__subtitle {
@@ -40,15 +40,40 @@
 
 .header__button {
   border: 1px solid #f8f8f8;
-  color:white;
+  color: white;
   background: transparent;
   width: 81px;
   height: 38px;
   top: 32px;
   padding: 8px, 16px, 8px, 16px;
   border-radius: 8px;
-  margin-top:32px;
-  margin-right:80px;
-  align-self:flex-end;  
+  margin-top: 32px;
+  margin-right: 80px;
+  align-self: flex-end;
   justify-content: flex-start;
+}
+
+@media screen and (max-width: 550px) {
+  .header__title {
+    color: var(--White, #fff);
+    font-family: "Roboto";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .header__subtitle {
+    color: var(--Gray_light, #f8f8f8);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .header__button {
+    border:none;
+  }
 }
