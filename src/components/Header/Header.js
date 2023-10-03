@@ -14,12 +14,13 @@ function Header(props) {
       window.removeEventListener("resize", handleResizeWindow);
     };
   }, []);
+  
   return (
     <>
       <header className="header">
-        <button className="header__button">
+        <Link className="header__button" to='/signup' onClick={props.signOut}>
           {width > breakpoint ? "Выход" : <img src={exit} alt="exit" />}
-        </button>
+        </Link>
         <div className="header__text">
           <h1 className="header__title">Наша команда</h1>
           <p className="header__subtitle">

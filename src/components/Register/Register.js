@@ -21,7 +21,6 @@ function Register(props) {
   function handleSubmit(e) {
     e.preventDefault();
     props.handleUpdateRegistration({
-      name: values.name,
       email: values.email,
       password: values.password,
     });
@@ -84,11 +83,11 @@ function Register(props) {
           </label>
           <input
             required
-            type="password"
-            name="password"
+            type="password2"
+            name="password2"
             className="register__input"
-            placeholder="Пароль"
-            id="password"
+            placeholder="Повторите пароль"
+            id="password2"
             value={values.password}
             onChange={handleChange}
           />

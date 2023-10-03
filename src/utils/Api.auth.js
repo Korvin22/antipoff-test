@@ -9,7 +9,7 @@ export class ApiAuth {
     return res.json();
   }
 
-  register(name, email, password) {
+  register(email, password) {
     return fetch(`${this._address}/register`, {
       method: "POST",
       headers: {

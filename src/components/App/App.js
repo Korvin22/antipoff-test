@@ -19,11 +19,13 @@ function App(props) {
 
   function handleUpdateRegistration(data) {
     apiAuth
-      .register(data.name, data.email, data.password)
+      .register( data.email, data.password)
       .then((res) => {
         setSuccessReg(true);
         localStorage.setItem("regName", res.name);
         localStorage.setItem("regEmail", res.email);
+        localStorage.setItem('token1', res.token)
+        console.log(localStorage.token1)
         navigate("/");
       })
       .catch((err) => {
@@ -34,11 +36,16 @@ function App(props) {
       .finally(() => {});
   }
 
+  function signOut() {
+    localStorage.removeItem("token1");
+    localStorage.clear();
+    setLoggedIn(false);}
+
   return (
     <div className="app">
       <div className="app__container">
         <Routes>
-          <Route exact path="/" element={<Main loggedIn={loggedIn} />} />
+          <Route exact path="/" element={<Main loggedIn={loggedIn} signOut={signOut}/>} />
           <Route path="/partner" element={<Partner />} />
           <Route
             path="/signup"

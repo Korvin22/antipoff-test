@@ -3,7 +3,7 @@ import Colleagues from "../Colleagues/Colleagues";
 function Main(props) {
   return (
     <main>
-      <Header />
+      <Header signOut={props.signOut}/>
       <Colleagues />
     </main>
   );

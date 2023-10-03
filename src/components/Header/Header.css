@@ -61,6 +61,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-top:12px;
   }
 
   .header__subtitle {
@@ -71,9 +72,13 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    max-width: 343px;
+    margin-top: 12px;
   }
 
   .header__button {
     border:none;
+    margin-top:12px;
+    margin-right:16px;
   }
 }
